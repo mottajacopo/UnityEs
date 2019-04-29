@@ -9,9 +9,9 @@ public class GameControlScript : MonoBehaviour {
     public GameObject player;
     private float elapsedTime = 0;
 
-
     void Update () {
-		isGameOver = !blueBall && !greenBall && !redBall && !orangeBall;
+
+        isGameOver = !blueBall && !greenBall && !redBall && !orangeBall;
         if (!isGameOver)
         {
             elapsedTime += Time.deltaTime;
@@ -27,7 +27,8 @@ public class GameControlScript : MonoBehaviour {
 
     void OnGUI() {
 		if(isGameOver) {
-			Rect rect = new Rect (Screen.width / 2 -75, Screen.height / 2, 150, 40);
+
+            Rect rect = new Rect (Screen.width / 2 -75, Screen.height / 2, 150, 40);
 			GUI.Box (rect, "Game Over  Good Job!");
 
             GUI.Box(new Rect(Screen.width / 2-75 , Screen.height / 2 + 50, 150, 30), "Your Time Was " + ((int)elapsedTime).ToString());
