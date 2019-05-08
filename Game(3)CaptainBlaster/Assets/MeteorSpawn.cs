@@ -14,7 +14,7 @@ public class MeteorSpawn : MonoBehaviour {
 		// The meteor is spawned at the same y and z coordinate as the spawn point, 
 		// but the x coordinate is offset by a number between −6 and 6. To allow 
 		// the meteors to spawn across the screen and not always in the same spot.
-		Vector3 spawnPos = transform.position + new Vector3(Random.Range(-6, 6), 0, 0);
+		Vector3 spawnPos = transform.position + new Vector3(Random.Range(-6, 6), 10, 0);
 		
 		// Instantiates (creates) a meteor at that position with no rotation (Quaternion.identity). 
 		Instantiate (meteorPrefab, spawnPos, Quaternion.identity);

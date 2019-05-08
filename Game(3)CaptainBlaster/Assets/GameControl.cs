@@ -13,7 +13,7 @@ public class GameControl : MonoBehaviour {
 	}
 	
 	public void PlayerDied () {
-		gameOverText.gameObject.setActive(true);
+		gameOverText.gameObject.SetActive(true);
 		Time.timeScale = 0;
 	}
 }
